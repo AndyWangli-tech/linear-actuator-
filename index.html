@@ -1,12 +1,282 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的产品营销落地页</title>
+    <title>High-Performance Linear Actuators | Precision Motion Control</title>
+    <style>
+        :root {
+            --primary-color: #0052cc;
+            --secondary-color: #333;
+            --light-bg: #f4f6f9;
+            --text-color: #222;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 82, 204, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #003d99;
+        }
+        .features {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .specs {
+            padding: 60px 0;
+            background: var(--light-bg);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .contact {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎来到我的产品营销站！</h1>
-    <p>这里是我的产品介绍，网站正在建设中...</p>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">MotionTech</div>
+            <div>
+                <a href="#features" style="margin-right: 20px; text-decoration: none; color: #555;">Features</a>
+                <a href="#specs" style="margin-right: 20px; text-decoration: none; color: #555;">Specifications</a>
+                <a href="#contact" class="btn" style="padding: 8px 15px; font-size: 14px;">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Industrial Grade Linear Actuators</h1>
+            <p>High precision, heavy-duty load capacity, and rock-solid reliability. Designed for automation, medical equipment, and solar tracking systems.</p>
+            <a href="#contact" class="btn">Request Technical Data</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Linear Actuators?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>High Precision</h3>
+                    <p>Sub-millimeter positioning accuracy ensuring flawless control for sensitive industrial automation tasks.</p>
+                </div>
+                <div class="card">
+                    <h3>Heavy Load Capacity</h3>
+                    <p>Engineered to handle push/pull forces up to 10,000N, perfect for demanding mechanical operations.</p>
+                </div>
+                <div class="card">
+                    <h3>IP66 Waterproof</h3>
+                    <p>Excellent environmental protection against dust and water, suitable for harsh outdoor conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="specs">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Standard Value</th>
+                        <th>Customizable Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Input Voltage</strong></td>
+                        <td>12V / 24V / 36V / 48V DC</td>
+                        <td>Available upon request</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stroke Length</strong></td>
+                        <td>50mm - 1000mm</td>
+                        <td>Up to 1500mm</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Load Capacity</strong></td>
+                        <td>6000 N (Push) / 4000 N (Pull)</td>
+                        <td>Custom high-torque gears</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Speed (No Load)</strong></td>
+                        <td>5 mm/s - 45 mm/s</td>
+                        <td>Variable speed motors</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Operating Temp</strong></td>
+                        <td>-26°C to +65°C</td>
+                        <td>Low-temperature lubricants available</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Our Engineers For a Quote</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="requirements">Stroke, Voltage & Load Requirements</label>
+                        <textarea id="requirements" name="requirements" rows="5" required placeholder="Please describe your application and required specs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MotionTech Actuator Solution. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
