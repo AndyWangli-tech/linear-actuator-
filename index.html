@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High-Performance Linear Actuators | Precision Motion Control</title>
+    <title>Changxing Motion Tech | Premium Linear Actuators & Motion Control Solutions</title>
     <style>
         :root {
-            --primary-color: #0052cc;
-            --secondary-color: #333;
+            --primary-color: #0b2545; /* 深工业蓝 */
+            --accent-color: #134074;  /* 科技蓝 */
+            --highlight: #8da9c4;     /* 银灰蓝 */
             --light-bg: #f4f6f9;
-            --text-color: #222;
+            --text-color: #1d2d44;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: var(--text-color);
+            background-color: #fff;
         }
         header {
             background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             padding: 0 20px;
         }
@@ -38,131 +40,169 @@
         }
         .logo {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 800;
             color: var(--primary-color);
+            letter-spacing: 0.5px;
+        }
+        .logo span {
+            color: var(--accent-color);
+            font-weight: 400;
         }
         .hero {
-            background: linear-gradient(rgba(0, 82, 204, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(19, 64, 116, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: #fff;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
         }
         .hero h1 {
-            font-size: 48px;
+            font-size: 46px;
             margin-bottom: 20px;
+            font-weight: 700;
         }
         .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 18px;
+            margin-bottom: 35px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0.9;
         }
         .btn {
             display: inline-block;
-            background: var(--primary-color);
-            color: #fff;
-            padding: 12px 30px;
+            background: #fff;
+            color: var(--primary-color);
+            padding: 12px 35px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn:hover {
-            background: #003d99;
+            background: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
         }
-        .features {
-            padding: 60px 0;
-            background: #fff;
+        .btn-primary {
+            background: var(--accent-color);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: var(--primary-color);
         }
         .section-title {
             text-align: center;
             font-size: 32px;
-            margin-bottom: 40px;
-            position: relative;
+            margin-bottom: 50px;
+            color: var(--primary-color);
         }
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
+            width: 60px;
             height: 4px;
-            background: var(--primary-color);
-            margin: 10px auto 0;
+            background: var(--accent-color);
+            margin: 12px auto 0;
+        }
+        /* 产品网格 */
+        .products-section {
+            padding: 80px 0;
+            background: var(--light-bg);
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         .card {
-            background: var(--light-bg);
+            background: #fff;
             padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-top: 4px solid var(--accent-color);
         }
         .card h3 {
             margin-top: 0;
             color: var(--primary-color);
+            font-size: 20px;
         }
-        .specs {
-            padding: 60px 0;
-            background: var(--light-bg);
+        .card p {
+            font-size: 15px;
+            color: #555;
+        }
+        /* 表格样式 */
+        .specs-section {
+            padding: 80px 0;
+            background: #fff;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            background: #fff;
-            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
         th, td {
-            padding: 15px;
+            padding: 15px 20px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
         }
         th {
             background-color: var(--primary-color);
             color: white;
+            font-weight: 600;
         }
         tr:hover {
-            background-color: #f1f1f1;
+            background-color: #f9fbfd;
         }
-        .contact {
-            padding: 60px 0;
-            background: #fff;
+        /* 询盘表单 */
+        .contact-section {
+            padding: 80px 0;
+            background: var(--light-bg);
         }
         .contact-form {
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
-            background: var(--light-bg);
+            background: #fff;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         .form-group {
             margin-bottom: 20px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
         }
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            background-color: #fafafa;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background-color: #fff;
         }
         footer {
-            background: var(--secondary-color);
+            background: var(--primary-color);
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
             font-size: 14px;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -170,103 +210,134 @@
 
     <header>
         <div class="container nav-container">
-            <div class="logo">MotionTech</div>
+            <div class="logo">Changxing <span>MotionTech</span></div>
             <div>
-                <a href="#features" style="margin-right: 20px; text-decoration: none; color: #555;">Features</a>
-                <a href="#specs" style="margin-right: 20px; text-decoration: none; color: #555;">Specifications</a>
-                <a href="#contact" class="btn" style="padding: 8px 15px; font-size: 14px;">Get a Quote</a>
+                <a href="#products" style="margin-right: 25px; text-decoration: none; color: var(--text-color); font-weight: 500;">Products</a>
+                <a href="#specs" style="margin-right: 25px; text-decoration: none; color: var(--text-color); font-weight: 500;">SLA Series</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px; color:#fff;">Inquire Now</a>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>Industrial Grade Linear Actuators</h1>
-            <p>High precision, heavy-duty load capacity, and rock-solid reliability. Designed for automation, medical equipment, and solar tracking systems.</p>
-            <a href="#contact" class="btn">Request Technical Data</a>
+            <h1>Advanced Motion Control Solutions</h1>
+            <p>Direct manufacturer of high-quality Electric Linear Actuators, Hydraulic Pumps, Slewing Drives, and Lifting Columns. Engineered for global industrial automation.</p>
+            <a href="#contact" class="btn">Request Product Catalog</a>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section id="products" class="products-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Our Linear Actuators?</h2>
+            <h2 class="section-title">Our Main Product Range</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>High Precision</h3>
-                    <p>Sub-millimeter positioning accuracy ensuring flawless control for sensitive industrial automation tasks.</p>
+                    <h3>Electric Linear Actuators</h3>
+                    <p>SLA series offering thrust from 200N to 10,000N. Customizable stroke, potentiometer, Hall sensors, and IP grades for medical, solar, and industrial use.</p>
                 </div>
                 <div class="card">
-                    <h3>Heavy Load Capacity</h3>
-                    <p>Engineered to handle push/pull forces up to 10,000N, perfect for demanding mechanical operations.</p>
+                    <h3>Hydraulic Pump & Actuators</h3>
+                    <p>Heavy-duty electric-hydraulic integrated actuators. Designed for environments requiring extreme force, compact structures, and smooth operation.</p>
                 </div>
                 <div class="card">
-                    <h3>IP66 Waterproof</h3>
-                    <p>Excellent environmental protection against dust and water, suitable for harsh outdoor conditions.</p>
+                    <h3>Slewing Drives & Bearings</h3>
+                    <p>High-torque slewing drive solutions optimized for solar tracking systems, construction machinery, and rotary automation arms.</p>
+                </div>
+                <div class="card">
+                    <h3>Lifting Columns & Table Frames</h3>
+                    <p>Precision servo lifting columns and height-adjustable smart office table frames. Smooth, low-noise, and dual-motor synchronous control.</p>
+                </div>
+                <div class="card">
+                    <h3>Intelligent Controllers</h3>
+                    <p>Handsets and control boxes tailored for linear actuator synchronization, power distribution, and programmable position memory.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="specs" class="specs">
+    <section id="specs" class="specs-section">
         <div class="container">
-            <h2 class="section-title">Technical Specifications</h2>
+            <h2 class="section-title">SLA Series Core Specifications</h2>
+            <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; color:#666;">Quick technical lookup for our standard electric putter models (SLA01 - SLA08). All parameters support OEM/ODM customization.</p>
             <table>
                 <thead>
                     <tr>
-                        <th>Parameter</th>
-                        <th>Standard Value</th>
-                        <th>Customizable Range</th>
+                        <th>Model Type</th>
+                        <th>Max Load (Push)</th>
+                        <th>Max Speed (No Load)</th>
+                        <th>Customizable Stroke</th>
+                        <th>Applications</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Input Voltage</strong></td>
-                        <td>12V / 24V / 36V / 48V DC</td>
-                        <td>Available upon request</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Stroke Length</strong></td>
+                        <td><strong>SLA01 / SLA011C</strong></td>
+                        <td>6000 N</td>
+                        <td>5 - 45 mm/s</td>
                         <td>50mm - 1000mm</td>
-                        <td>Up to 1500mm</td>
+                        <td>Industrial, Outdoor Waterproof</td>
                     </tr>
                     <tr>
-                        <td><strong>Max Load Capacity</strong></td>
-                        <td>6000 N (Push) / 4000 N (Pull)</td>
-                        <td>Custom high-torque gears</td>
+                        <td><strong>SLA02 (with Potentiometer)</strong></td>
+                        <td>1500 N</td>
+                        <td>20 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>Position Feedback, Automation</td>
                     </tr>
                     <tr>
-                        <td><strong>Max Speed (No Load)</strong></td>
-                        <td>5 mm/s - 45 mm/s</td>
-                        <td>Variable speed motors</td>
+                        <td><strong>SLA03 Heavy Duty</strong></td>
+                        <td>6000 N</td>
+                        <td>29 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>High-Speed Mechanical Lifting</td>
                     </tr>
                     <tr>
-                        <td><strong>Operating Temp</strong></td>
-                        <td>-26°C to +65°C</td>
-                        <td>Low-temperature lubricants available</td>
+                        <td><strong>SLA04 High Speed</strong></td>
+                        <td>200 N</td>
+                        <td>230 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>Rapid Action, Light Window Openers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SLA-PT02 Track Type</strong></td>
+                        <td>4000 N</td>
+                        <td>-</td>
+                        <td>Up to 600mm</td>
+                        <td>Reclining Chairs, Smart Furniture</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contact Our Engineers For a Quote</h2>
+            <h2 class="section-title">Request a Quote & Technical Data</h2>
             <div class="contact-form">
                 <form action="#" method="POST">
                     <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                        <label for="name">Your Name / Company</label>
+                        <input type="text" id="name" name="name" required placeholder="e.g. Motion Solutions Inc.">
                     </div>
                     <div class="form-group">
                         <label for="email">Business Email</label>
-                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                        <input type="email" id="email" name="email" required placeholder="sales@yourcompany.com">
                     </div>
                     <div class="form-group">
-                        <label for="requirements">Stroke, Voltage & Load Requirements</label>
-                        <textarea id="requirements" name="requirements" rows="5" required placeholder="Please describe your application and required specs..."></textarea>
+                        <label for="product-type">Interested Product Category</label>
+                        <select id="product-type" name="product-type">
+                            <option value="actuator">Electric Linear Actuator (SLA Series)</option>
+                            <option value="hydraulic">Hydraulic Pump / Hydraulic Actuator</option>
+                            <option value="slewing">Slewing Drive & Bearing</option>
+                            <option value="lifting">Lifting Column & Smart Table Frame</option>
+                            <option value="controller">Controller / Accessories</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Send Inquiry</button>
+                    <div class="form-group">
+                        <label for="requirements">Technical Specifications (Stroke, Voltage, Load, Speed)</label>
+                        <textarea id="requirements" name="requirements" rows="5" required placeholder="Please describe your specific mechanical requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer; font-size: 16px;">Submit Inquiry</button>
                 </form>
             </div>
         </div>
@@ -274,7 +345,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 MotionTech Actuator Solution. All Rights Reserved.</p>
+            <p>&copy; 2026 Changzhou Changxing Motion Tech Co., Ltd. All Rights Reserved.</p>
+            <p style="font-size: 12px; margin-top: 5px; opacity: 0.7;">Factory Add: No.91 Hanjiang West Road, Xinbei District, Changzhou, Jiangsu, China</p>
         </div>
     </footer>
 
