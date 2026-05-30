@@ -36,58 +36,43 @@
         </div>
     </div>
 
-   <div class="container detail-grid">
-        <div>
-            <img src="SLA01-1.jpg" alt="SLA01 Standard Linear Actuator" class="product-image">
-            <p style="margin-top: 20px; color:#666; font-weight: bold;">Model: SLA01 - Standard Edition</p>
+  <div class="container detail-grid">
+        <div class="product-gallery">
+            <img src="SLA01-1.jpg" alt="SLA01 Electric Linear Actuator" class="product-image" id="main-product-img">
+            
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <img src="SLA01-1.jpg" alt="White Background" style="width: 28%; border: 2px solid var(--siemens-teal); cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-1.jpg'">
+                <img src="SLA01-3.png" alt="Product Details" style="width: 28%; border: 1px solid #ddd; cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-3.png'">
+                <img src="SLA01-4S.png" alt="1-to-4 Synchronous System" style="width: 28%; border: 1px solid #ddd; cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-4S.png'">
+            </div>
+            <p style="margin-top: 15px; color: #666; font-size: 14px; font-style: italic;">* Click thumbnails above to preview different views (Main / Details / 1-to-4 Synchronous Control System).</p>
         </div>
+
         <div class="tech-data">
-            <h3 style="color: var(--siemens-teal);">Core Advantages</h3>
-            <ul>
-                <li>Aluminum alloy outer tube and inner rod</li>
-                <li>Low noise design (less than 50dB)</li>
-                <li>Built-in limit switches (Automatic stop)</li>
-                <li>High IP protection grade up to IP54</li>
-            </ul>
-            <h3 style="color: var(--siemens-teal); margin-top: 30px;">Key Specs</h3>
-            <p>Voltage: 12V/24V/36V/48V DC</p>
-            <p>Max Thrust: 900N</p>
-            <p>Stroke Length: 10 - 1000mm</p>
-        </div>
+            <h2 style="color: var(--siemens-teal); margin-top: 0;">SLA01 Series Premium Linear Actuator</h2>
+            <p style="color: #ccc; line-height: 1.6;">The SLA01 series is engineered for high-precision and reliable motion control. Featuring a robust aluminum alloy construction and integrated limit switches, it delivers smooth operation across diverse applications from medical beds to heavy-duty industrial automation.</p>
+            
+            <hr style="border-color: #334155; margin: 25px 0;">
 
-        <div style="margin-top: 50px;">
-            <img src="SLA01-3.png" alt="SLA01 Heavy Duty Linear Actuator" class="product-image">
-            <p style="margin-top: 20px; color:#666; font-weight: bold;">Model: SLA01 - Heavy Duty Edition</p>
-        </div>
-        <div class="tech-data" style="margin-top: 50px;">
             <h3 style="color: var(--siemens-teal);">Core Advantages</h3>
-            <ul>
-                <li>Reinforced structure for industrial applications</li>
-                <li>Enhanced waterproof and dustproof seals</li>
-                <li>Excellent durability under high load</li>
-                <li>Ideal for agricultural and automation machinery</li>
+            <ul style="line-height: 1.8; padding-left: 20px;">
+                <li><strong>Premium Build:</strong> High-grade aluminum alloy outer tube and inner thrust rod.</li>
+                <li><strong>Ultra-Quiet Operation:</strong> Advanced low-noise motor design (under 50dB).</li>
+                <li><strong>Smart Safety:</strong> Built-in factory-preset limit switches for automatic stopping.</li>
+                <li><strong>Excellent Protection:</strong> Reliable sealing with an IP54 weather-protection rating.</li>
+                <li><strong>Advanced Synchronous Control:</strong> Fully supports 1-to-4 synchronous tracking systems for multi-actuator balanced lifting.</li>
             </ul>
-            <h3 style="color: var(--siemens-teal); margin-top: 30px;">Key Specs</h3>
-            <p>Voltage: 12V/24V/36V/48V DC</p>
-            <p>Max Thrust: 1500N (Upgraded)</p>
-            <p>Stroke Length: 50 - 1200mm</p>
-        </div>
 
-        <div style="margin-top: 50px;">
-            <img src="SLA01-4S.png" alt="SLA01 Compact Linear Actuator" class="product-image">
-            <p style="margin-top: 20px; color:#666; font-weight: bold;">Model: SLA01-4S - Compact Edition</p>
-        </div>
-        <div class="tech-data" style="margin-top: 50px;">
-            <h3 style="color: var(--siemens-teal);">Core Advantages</h3>
-            <ul>
-                <li>Ultra-compact design for limited installation space</li>
-                <li>Lightweight yet robust performance</li>
-                <li>Smooth and quiet operation</li>
-                <li>Perfect for smart home and medical equipment</li>
-            </ul>
-            <h3 style="color: var(--siemens-teal); margin-top: 30px;">Key Specs</h3>
-            <p>Voltage: 12V/24V DC</p>
-            <p>Max Thrust: 600N</p>
-            <p>Stroke Length: 10 - 500mm</p>
+            <h3 style="color: var(--siemens-teal); margin-top: 30px;">Technical Specifications</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 4px;">
+                <p style="margin: 0;"><strong>Input Voltage:</strong> 12V / 24V / 36V / 48V DC</p>
+                <p style="margin: 0;"><strong>Max Load Capacity:</strong> Up to 1500N</p>
+                <p style="margin: 0;"><strong>Stroke Length:</strong> 10mm - 1200mm (Customizable)</p>
+                <p style="margin: 0;"><strong>Speed Range:</strong> 5mm/s - 45mm/s</p>
+            </div>
+
+            <div style="margin-top: 35px; text-align: center;">
+                <a href="#contact" style="display: inline-block; background: var(--siemens-teal); color: #1e262d; text-decoration: none; padding: 12px 35px; font-weight: bold; border-radius: 4px; transition: 0.3s;" onmouseover="this.style.background='#009999'; this.style.color='#fff'" onmouseout="this.style.background='#00ffcc'; this.style.color='#1e262d'">Inquire Now / Get a Quote</a>
+            </div>
         </div>
     </div>
