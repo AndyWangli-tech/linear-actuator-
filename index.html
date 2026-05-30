@@ -61,7 +61,7 @@
             color: var(--siemens-dark-teal);
         }
 
-        /* Hero Banner - Siemens Tech style */
+        /* Hero Banner */
         .hero {
             background: var(--siemens-bg-dark);
             color: #fff;
@@ -112,7 +112,23 @@
             height: 350px;
             object-fit: cover;
             border-left: 4px solid var(--siemens-teal);
-            background: #2d3748;
+        }
+
+        /* 新增：核心技术优势板块 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--siemens-text-dark);
+        }
+        .feature-item p {
+            color: #718096;
+            font-size: 14px;
         }
 
         /* Sections */
@@ -157,9 +173,11 @@
         }
         .card-img {
             width: 100%;
-            height: 220px;
-            background-color: #e2e8f0;
-            object-fit: cover;
+            height: 250px;
+            object-fit: contain;
+            background-color: #f7fafc;
+            padding: 10px;
+            box-sizing: border-box;
         }
         .card-content {
             padding: 30px;
@@ -177,9 +195,25 @@
             margin-top: 20px;
             display: inline-block;
         }
-        .card-link:hover {
-            text-decoration: underline;
+
+        /* 新增：全球应用领域群 */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
+        .app-banner {
+            background: #2d3748;
+            color: #fff;
+            padding: 40px;
+            position: relative;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .app-banner h4 { margin: 0 0 10px 0; font-size: 20px; color: var(--siemens-teal); }
+        .app-banner p { margin: 0; font-size: 14px; color: #cbd5e1; }
 
         /* Siemens Engineering Specs Table */
         .siemens-table {
@@ -214,39 +248,14 @@
             max-width: 700px;
             margin: auto;
         }
-        .form-container h2 {
-            color: #fff;
-            margin-top: 0;
-        }
-        .form-group {
-            margin-bottom: 24px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #cbd5e1;
-        }
+        .form-container h2 { color: #fff; margin-top: 0; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #cbd5e1; }
         .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 12px;
-            background: #2d3748;
-            border: 1px solid #4a5568;
-            color: #fff;
-            box-sizing: border-box;
+            width: 100%; padding: 12px; background: #2d3748; border: 1px solid #4a5568; color: #fff; box-sizing: border-box;
         }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--siemens-teal);
-        }
-
         footer {
-            background: var(--siemens-text-dark);
-            color: #a0aec0;
-            padding: 40px 0;
-            font-size: 13px;
-            border-top: 4px solid var(--siemens-teal);
+            background: var(--siemens-text-dark); color: #a0aec0; padding: 40px 0; font-size: 13px; border-top: 4px solid var(--siemens-teal);
         }
     </style>
 </head>
@@ -258,6 +267,8 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="actuators.html">Linear Actuators</a>
+                <a href="#applications">Applications</a>
+                <a href="#specifications">Technical Specs</a>
                 <a href="#contact">Contact Support</a>
             </nav>
         </div>
@@ -270,8 +281,27 @@
                 <p>Driving industrial productivity with Changxing's precision linear actuators and integrated intelligent motion control systems. Reliable. Efficient. Heavy-Duty.</p>
                 <a href="#contact" class="siemens-btn">Explore Intelligent Motion</a>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Industrial Automation" class="hero-img">
+            <div style="background: #fff; padding: 15px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <img src="SLA01-3.png" alt="Changxing Premium Linear Actuator" class="hero-img" style="object-fit: contain; height: 320px; border: none;">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" style="padding: 60px 0;">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">100% Customization</h3>
+                    <p>Tailored stroke length, dynamic load limits, specific voltage configs (12V/24V/36V/48V), and signal feedback integration.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">Rugged Durability</h3>
+                    <p>Engineered with heavy-duty aluminum alloy housings and precision cut internal gearboxes. Protection ratings up to IP66.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">Global Certification</h3>
+                    <p>Manufactured under strict ISO9001 standards, ensuring exceptional mechanical reliability across European and American industrial grids.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -282,16 +312,16 @@
             <div class="product-grid">
                 
                 <div class="siemens-card">
-                    <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&w=500&q=80" alt="Linear Actuators" class="card-img">
+                    <img src="SLA01-1.jpg" alt="SLA01 Electric Linear Actuator" class="card-img">
                     <div class="card-content">
                         <h3>Electric Linear Actuators</h3>
                         <p>The standard SLA series tailored for high thrust applications up to 10,000N. Outfitted with specialized Hall sensors and optional potentiometer feedback systems.</p>
-                        <a href="#contact" class="card-link">View SLA Series &gt;</a>
+                        <a href="actuators.html" class="card-link">View SLA Series &gt;</a>
                     </div>
                 </div>
 
                 <div class="siemens-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Hydraulic Pumps" class="card-img">
+                    <img src="SLA01-4S.png" alt="Electro-Hydraulic Systems" class="card-img">
                     <div class="card-content">
                         <h3>Electro-Hydraulic Systems</h3>
                         <p>Heavy-duty integrated hydraulic pumps and actuators. Providing seamless motion transitions and bulletproof endurance for extreme architectural and mechanical loads.</p>
@@ -300,7 +330,7 @@
                 </div>
 
                 <div class="siemens-card">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80" alt="Slewing Drives" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80" alt="Slewing Drives" class="card-img" style="object-fit: cover;">
                     <div class="card-content">
                         <h3>Slewing Drives & Bearings</h3>
                         <p>High-torque rotary solutions optimized for modern dual-axis solar tracking arrays and heavy machinery rotating axes.</p>
@@ -312,7 +342,27 @@
         </div>
     </section>
 
-    <section id="specifications" class="bg-light">
+    <section id="applications" class="bg-light">
+        <div class="container">
+            <h2 class="section-headline">Empowering Global Industries</h2>
+            <div class="app-grid">
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Solar Tracking Systems</h4>
+                    <p>Heavy duty push-pull solutions for real-time solar panel astronomical alignments.</p>
+                </div>
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Medical & Healthcare</h4>
+                    <p>Ultra-silent, precise synchronous control systems for hospital beds and patient lifters.</p>
+                </div>
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Industrial Automation</h4>
+                    <p>Replaces traditional pneumatic cylinders to ensure high speed, lower emissions, and error-free tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specifications">
         <div class="container">
             <h2 class="section-headline">Technical Specification Matrix</h2>
             <table class="siemens-table">
@@ -359,7 +409,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="bg-light">
         <div class="container">
             <div class="form-container">
                 <h2>Request Technical Consulting</h2>
@@ -375,7 +425,7 @@
                     </div>
                     <div class="form-group">
                         <label>Application Field</label>
-                        <select style="background: #2d3748; color: #fff;">
+                        <select style="background: #2d3748; color: #fff; width:100%; padding:12px; border:1px solid #4a5568;">
                             <option>Industrial Automation & Machinery</option>
                             <option>Solar Tracking Systems</option>
                             <option>Medical & Healthcare Furniture</option>
