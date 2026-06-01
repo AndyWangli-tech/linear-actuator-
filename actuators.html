@@ -2,77 +2,468 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Linear Actuators | Changxing MotionTech Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changxing MotionTech | Precision Electric Linear Actuators</title>
     <style>
-        /* 直接复用首页的 :root 配色和基础样式 */
-        :root { --siemens-teal: #00ffcc; --siemens-bg-dark: #1e262d; --siemens-dark-teal: #009999; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; }
-        header { padding: 20px 0; border-bottom: 2px solid #f3f5f7; display: flex; justify-content: space-between; align-items: center; }
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-        .logo { font-weight: 900; text-decoration: none; color: #000; }
-        nav a { margin-left: 25px; text-decoration: none; color: #4a5568; font-weight: 600; }
-        
-        /* 详情页特有样式 */
-        .product-hero { background: #f3f5f7; padding: 60px 0; border-left: 10px solid var(--siemens-teal); }
-        .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 40px; }
-        .product-image { width: 100%; background: #fff; border: 1px solid #ddd; }
-        .tech-data { background: var(--siemens-bg-dark); color: #fff; padding: 30px; }
+        :root {
+            --siemens-teal: #00ffcc;       /* 西门子标志性亮青绿 */
+            --siemens-dark-teal: #009999;  /* 按钮深青绿 */
+            --siemens-bg-dark: #1e262d;    /* 经典深灰蓝底色 */
+            --siemens-text-dark: #0f181f;  /* 严谨的深色文字 */
+            --siemens-gray-light: #f3f5f7; /* 浅灰背景 */
+        }
+        body {
+            font-family: 'Siemens Sans', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            color: var(--siemens-text-dark);
+            background-color: #fff;
+        }
+        /* Top Navigation */
+        header {
+            background: #fff;
+            border-bottom: 2px solid var(--siemens-gray-light);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0 24px;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--siemens-text-dark);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--siemens-dark-teal);
+        }
+        header nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        header nav a:hover {
+            color: var(--siemens-dark-teal);
+        }
+        /* Hero Banner */
+        .hero {
+            background: var(--siemens-bg-dark);
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+        }
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .hero h1 span {
+            color: var(--siemens-teal);
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #cbd5e1;
+            max-width: 500px;
+        }
+        .siemens-btn {
+            display: inline-block;
+            background: var(--siemens-dark-teal);
+            color: #fff;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .siemens-btn:hover {
+            background: #007777;
+        }
+        .hero-img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+        }
+        /* 核心技术优势板块 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--siemens-text-dark);
+        }
+        .feature-item p {
+            color: #718096;
+            font-size: 14px;
+        }
+        /* Sections */
+        section {
+            padding: 90px 0;
+        }
+        .bg-light {
+            background-color: var(--siemens-gray-light);
+        }
+        .section-headline {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-headline::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--siemens-teal);
+        }
+        /* Siemens Style Product Cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        .siemens-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .siemens-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-color: var(--siemens-dark-teal);
+        }
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background-color: #f7fafc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .card-content {
+            padding: 30px;
+        }
+        .card-content h3 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .card-link {
+            color: var(--siemens-dark-teal);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        /* 全球应用领域群 */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .app-banner {
+            background: #2d3748;
+            color: #fff;
+            padding: 40px;
+            position: relative;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .app-banner h4 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: var(--siemens-teal);
+        }
+        .app-banner p {
+            margin: 0;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+        /* Siemens Engineering Specs Table */
+        .siemens-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        .siemens-table th {
+            background-color: var(--siemens-bg-dark);
+            color: #fff;
+            padding: 18px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #2d3748;
+        }
+        .siemens-table td {
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+            font-size: 15px;
+        }
+        .siemens-table tr:nth-child(even) {
+            background-color: var(--siemens-gray-light);
+        }
+        /* Siemens-Style Form */
+        .form-container {
+            background: var(--siemens-bg-dark);
+            color: #fff;
+            padding: 50px;
+            max-width: 700px;
+            margin: auto;
+        }
+        .form-container h2 {
+            color: #fff;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: #2d3748;
+            border: 1px solid #4a5568;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        footer {
+            background: var(--siemens-text-dark);
+            color: #a0aec0;
+            padding: 40px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--siemens-teal);
+        }
     </style>
 </head>
 <body>
-    <header class="container">
-        <a href="index.html" class="logo">CHANGXING <span>MOTIONTECH</span></a>
-        <nav>
-           <a href="index.html">Home</a>
-           <a href="actuators.html">Linear Actuators</a>
-           <a href="#contact">Contact Support</a>
-        </nav>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">CHANGXING <span>MOTIONTECH</span></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="actuators.html">Linear Actuators</a>
+                <a href="#applications">Applications</a>
+                <a href="#specifications">Technical Specs</a>
+                <a href="#contact">Contact Support</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="product-hero">
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h1>Ingenuity for motion:<br><span>Electric Linear Actuators</span></h1>
+                <p>Driving industrial productivity with Changxing's precision electric linear actuators and integrated intelligent motion control systems. Reliable. Efficient. Heavy-Duty.</p>
+                <a href="#contact" class="siemens-btn">Explore Intelligent Motion</a>
+            </div>
+            <div style="background: #fff; padding: 15px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                <img src="SLA01-3.png" alt="Changxing Premium Linear Actuator" class="hero-img" style="height: 320px; border: none;">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" style="padding: 60px 0;">
         <div class="container">
-            <h1>SLA Series Electric Linear Actuators</h1>
-            <p>Reliable motion control for medical, industrial, and solar applications.</p>
-        </div>
-    </div>
-
-  <div class="container detail-grid">
-        <div class="product-gallery">
-            <img src="SLA01-1.jpg" alt="SLA01 Electric Linear Actuator" class="product-image" id="main-product-img">
-            
-            <div style="display: flex; gap: 15px; margin-top: 20px;">
-                <img src="SLA01-1.jpg" alt="White Background" style="width: 28%; border: 2px solid var(--siemens-teal); cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-1.jpg'">
-                <img src="SLA01-3.png" alt="Product Details" style="width: 28%; border: 1px solid #ddd; cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-3.png'">
-                <img src="SLA01-4S.png" alt="1-to-4 Synchronous System" style="width: 28%; border: 1px solid #ddd; cursor: pointer; background: #fff;" onclick="document.getElementById('main-product-img').src='SLA01-4S.png'">
-            </div>
-            <p style="margin-top: 15px; color: #666; font-size: 14px; font-style: italic;">* Click thumbnails above to preview different views (Main / Details / 1-to-4 Synchronous Control System).</p>
-        </div>
-
-        <div class="tech-data">
-            <h2 style="color: var(--siemens-teal); margin-top: 0;">SLA01 Series Premium Linear Actuator</h2>
-            <p style="color: #ccc; line-height: 1.6;">The SLA01 series is engineered for high-precision and reliable motion control. Featuring a robust aluminum alloy construction and integrated limit switches, it delivers smooth operation across diverse applications from medical beds to heavy-duty industrial automation.</p>
-            
-            <hr style="border-color: #334155; margin: 25px 0;">
-
-            <h3 style="color: var(--siemens-teal);">Core Advantages</h3>
-            <ul style="line-height: 1.8; padding-left: 20px;">
-                <li><strong>Premium Build:</strong> High-grade aluminum alloy outer tube and inner thrust rod.</li>
-                <li><strong>Ultra-Quiet Operation:</strong> Advanced low-noise motor design (under 50dB).</li>
-                <li><strong>Smart Safety:</strong> Built-in factory-preset limit switches for automatic stopping.</li>
-                <li><strong>Excellent Protection:</strong> Reliable sealing with an IP54 weather-protection rating.</li>
-                <li><strong>Advanced Synchronous Control:</strong> Fully supports 1-to-4 synchronous tracking systems for multi-actuator balanced lifting.</li>
-            </ul>
-
-            <h3 style="color: var(--siemens-teal); margin-top: 30px;">Technical Specifications</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 4px;">
-                <p style="margin: 0;"><strong>Input Voltage:</strong> 12V / 24V / 36V / 48V DC</p>
-                <p style="margin: 0;"><strong>Max Load Capacity:</strong> Up to 900N</p>
-                <p style="margin: 0;"><strong>Stroke Length:</strong> 10mm - 1000mm (Customizable)</p>
-                <p style="margin: 0;"><strong>Speed Range:</strong> 5mm/s - 80mm/s</p>
-            </div>
-
-            <div style="margin-top: 35px; text-align: center;">
-                <a href="#contact" style="display: inline-block; background: var(--siemens-teal); color: #1e262d; text-decoration: none; padding: 12px 35px; font-weight: bold; border-radius: 4px; transition: 0.3s;" onmouseover="this.style.background='#009999'; this.style.color='#fff'" onmouseout="this.style.background='#00ffcc'; this.style.color='#1e262d'">Inquire Now / Get a Quote</a>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">100% Customization</h3>
+                    <p>Tailored stroke length, dynamic load limits, specific voltage configs (12V/24V/36V/48V), and signal feedback integration.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">Rugged Durability</h3>
+                    <p>Engineered with heavy-duty aluminum alloy housings and precision cut internal gearboxes. Protection ratings up to IP66.</p>
+                </div>
+                <div class="feature-item">
+                    <h3 style="border-left: 3px solid var(--siemens-dark-teal); padding-left: 10px;">Global Certification</h3>
+                    <p>Manufactured under strict ISO9001 standards, ensuring exceptional mechanical reliability across European and American industrial grids.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-headline">Our Linear Actuator Portfolio</h2>
+            <div class="product-grid">
+                <div class="siemens-card">
+                    <img src="SLA01-1.jpg" alt="SLA01 Electric Linear Actuator" class="card-img">
+                    <div class="card-content">
+                        <h3>Standard Heavy-Duty Actuators</h3>
+                        <p>The standard SLA series tailored for high thrust applications up to 6,000N. Outfitted with specialized Hall sensors and optional position feedback systems.</p>
+                        <a href="actuators.html" class="card-link">View SLA Series &gt;</a>
+                    </div>
+                </div>
+                <div class="siemens-card">
+                    <img src="SLA01-3.png" alt="SLA03 Heavy Dynamic Actuator" class="card-img">
+                    <div class="card-content">
+                        <h3>High-Frequency Automated Solutions</h3>
+                        <p>Engineered for continuous industrial dutycycles. Features optimized internal gearbox efficiency and enhanced thermal performance for high-frequency operations.</p>
+                        <a href="actuators.html" class="card-link">Technical Data &gt;</a>
+                    </div>
+                </div>
+                <div class="siemens-card">
+                    <img src="SLA01-4S.png" alt="SLA04 High Velocity Actuator" class="card-img">
+                    <div class="card-content">
+                        <h3>High-Speed & Precise Tracking</h3>
+                        <p>Delivering high-velocity positioning up to 230 mm/s. Perfect for rapid ventilation control, synchronized tracking, and precise window automation.</p>
+                        <a href="actuators.html" class="card-link">Configure System &gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications" class="bg-light">
+        <div class="container">
+            <h2 class="section-headline">Empowering Global Industries</h2>
+            <div class="app-grid">
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Solar Tracking Systems</h4>
+                    <p>Heavy duty push-pull solutions for real-time solar panel astronomical alignments.</p>
+                </div>
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Medical & Healthcare</h4>
+                    <p>Ultra-silent, precise synchronous control systems for hospital beds and patient lifters.</p>
+                </div>
+                <div class="app-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80') no-repeat center center/cover;">
+                    <h4>Industrial Automation</h4>
+                    <p>Replaces traditional pneumatic cylinders to ensure high speed, lower emissions, and error-free tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specifications">
+        <div class="container">
+            <h2 class="section-headline">Technical Specification Matrix</h2>
+            <table class="siemens-table">
+                <thead>
+                    <tr>
+                        <th>Equipment Model</th>
+                        <th>Max Mechanical Thrust</th>
+                        <th>Velocity (No Load)</th>
+                        <th>Stroke Adaptation</th>
+                        <th>Industrial Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SLA01 / SLA011C</strong></td>
+                        <td>6000 N</td>
+                        <td>5 - 45 mm/s</td>
+                        <td>50mm - 1000mm</td>
+                        <td>IP66 Harsh Environment Duty</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SLA02 Feedback Opt.</strong></td>
+                        <td>1500 N</td>
+                        <td>20 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>Integrated Potentiometer Position Control</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SLA03 Heavy Dynamic</strong></td>
+                        <td>6000 N</td>
+                        <td>29 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>High-Frequency Automated Operation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SLA04 High Velocity</strong></td>
+                        <td>200 N</td>
+                        <td>230 mm/s</td>
+                        <td>20mm - 800mm</td>
+                        <td>Synchronized Ventilation / Window Automation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <div class="form-container">
+                <h2>Request Technical Consulting</h2>
+                <p style="color: #cbd5e1; margin-bottom: 30px;">Connect directly with our application engineers for custom OEM/ODM specifications.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label>Company / Organization Name</label>
+                        <input type="text" required placeholder="e.g. European Automation GmbH">
+                    </div>
+                    <div class="form-group">
+                        <label>Corporate Email</label>
+                        <input type="email" required placeholder="engineering@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Application Field</label>
+                        <select style="background: #2d3748; color: #fff; width:100%; padding:12px; border:1px solid #4a5568;">
+                            <option>Solar Tracking Systems</option>
+                            <option>Industrial Automation & Machinery</option>
+                            <option>Medical & Healthcare Furniture</option>
+                            <option>Other Motion Control Field</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Engineering Requirements (Stroke, Load, Voltage)</label>
+                        <textarea rows="4" required placeholder="Specify your required parameters..."></textarea>
+                    </div>
+                    <button type="submit" class="siemens-btn" style="width: 100%;">Submit Technical Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Changzhou Changxing Motion Tech Co., Ltd. Global Motion Systems. All Rights Reserved.</p>
+            <p style="margin-top: 8px; opacity: 0.6;">Factory Division: No.91 Hanjiang West Road, Xinbei District, Changzhou, Jiangsu, China</p>
+        </div>
+    </footer>
+</body>
+</html>
