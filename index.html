@@ -1,146 +1,37 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Changxing MotionTech | Precision Linear Actuators</title>
-    <style>
-        :root {
-            --bg-main: #0b0f19;
-            --bg-secondary: #111827;
-            --bg-card: #1f2937;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --accent-teal: #00f2fe;
-            --accent-blue: #0070f3;
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
-        
-        /* Navigation */
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); }
-        .navbar .logo { font-size: 1.3rem; font-weight: 700; color: #fff; text-decoration: none; }
-        .navbar .logo span { color: var(--accent-teal); }
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--accent-teal); }
-        .nav-cta { background: linear-gradient(135deg, var(--accent-blue), #005bb5); color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 4px; }
-
-        /* Hero Section */
-        .hero { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
-        .hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
-        .hero-buttons { display: flex; gap: 1rem; }
-        .btn-primary { background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue)); color: #0b0f19; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
-        .btn-secondary { border: 1px solid var(--border-color); color: var(--text-main); padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; background: rgba(255, 255, 255, 0.03); }
-
-        /* Products Section */
-        .products-section { background: var(--bg-secondary); padding: 5rem 2rem; border-top: 1px solid var(--border-color); }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 3rem auto 0 auto; }
-        .product-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-media { text-align: center; background: rgba(0, 0, 0, 0.2); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
-        .card-media img { max-width: 100%; height: 180px; object-fit: contain; }
-        .card-title { font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff; }
-        .card-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .card-btn { display: block; text-align: center; background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue)); color: #0b0f19; padding: 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
-
-        /* Footer */
-        .footer { padding: 4rem 2rem 2rem 2rem; border-top: 1px solid var(--border-color); background: var(--bg-main); }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr repeat(2, 1fr); gap: 4rem; }
-        .footer-brand h3 { font-size: 1.2rem; margin-bottom: 1rem; }
-        .footer-brand h3 span { color: var(--accent-teal); }
-        .footer-links h4 { font-size: 1rem; margin-bottom: 1rem; color: #fff; }
-        .footer-links ul { list-style: none; }
-        .footer-links ul li { margin-bottom: 0.6rem; }
-        .footer-links ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
-        .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <a href="index.html" class="logo">Changxing<span>MotionTech</span></a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="actuators.html">Products</a>
-            <a href="Linear actuators.pdf" target="_blank">Catalog</a>
-            <a href="#contact" class="nav-cta">Contact</a>
+<header class="hero" style="padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;">
+    <div class="hero-content">
+        <h1 style="font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Next-Gen Precision Micro Motion</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem;">We manufacture premium micro linear actuators engineered for space-critical applications. Delivering robust force, high repeatability, and industrial grade reliability.</p>
+        <div class="hero-buttons">
+            <a href="#products" class="btn-primary" style="background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Explore Products</a>
         </div>
-    </nav>
+    </div>
+    <div class="hero-image">
+        <img src="SLA01-1.jpg" alt="Linear Actuator" style="max-width: 100%; height: auto;">
+    </div>
+</header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Next-Gen Precision Micro Motion</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">We manufacture premium micro linear actuators engineered for space-critical applications. Delivering robust force, high repeatability, and industrial grade reliability.</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn-primary">Explore Products</a>
-                <a href="Linear actuators.pdf" target="_blank" class="btn-secondary">Download Catalog</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="SLA01-1.jpg" alt="Linear Actuator" style="max-width: 100%; height: auto;">
-        </div>
-    </header>
+<section class="products-section" id="products" style="background: var(--bg-secondary); padding: 5rem 2rem; border-top: 1px solid var(--border-color);">
+    <div style="text-align: center;">
+        <h2>Featured Actuators</h2>
+        <p style="color: var(--text-muted);">High performance solutions for automation, robotics, and medical fields.</p>
+    </div>
 
-    <section class="products-section" id="products">
-        <div style="text-align: center;">
-            <h2>Featured Actuators</h2>
-            <p style="color: var(--text-muted);">High performance solutions for automation, robotics, and medical fields.</p>
-        </div>
-
-        <div class="product-grid">
-            {% for product in site.products %}
-            <div class="product-card">
-                <div>
-                    <div class="card-media">
-                        <img src="{{ product.image }}" alt="{{ product.title }}">
-                    </div>
-                    <h3 class="card-title">{{ product.title }}</h3>
-                    <p class="card-desc">{{ product.description }}</p>
+    <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 3rem auto 0 auto;">
+        {% for product in site.products %}
+        <div class="product-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div class="card-media" style="text-align: center; background: rgba(0, 0, 0, 0.2); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <img src="{{ product.image }}" alt="{{ product.title }}" style="max-width: 100%; height: 180px; object-fit: contain;">
                 </div>
-                <a href="{{ product.url | relative_url }}" class="card-btn">View Full Specifications</a>
+                <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff;">{{ product.title }}</h3>
+                <p class="card-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">{{ product.description }}</p>
             </div>
-            {% endfor %}
-
-            <div class="product-card">
-                <div>
-                    <div class="card-media" style="height: 180px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); border-radius: 6px;">
-                        <span style="color: var(--text-muted);">SLA Series Extended</span>
-                    </div>
-                    <h3 class="card-title">Heavy Duty Actuators</h3>
-                    <p class="card-desc">Advanced series supporting custom stroke speeds, enhanced protection levels, and higher load capacities for industrial frameworks.</p>
-                </div>
-                <a href="actuators.html" class="card-btn" style="background: rgba(255,255,255,0.1); color: #fff;">Browse Series</a>
-            </div>
+            <a href="{{ product.url | relative_url }}" class="card-btn" style="display: block; text-align: center; background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600;">View Full Specifications</a>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <h3>Changxing<span>MotionTech</span></h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Innovative micro-automation drive systems.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="actuators.html">Products</a></li>
-                </ul>
-            </div>
-            <div class="footer-links" id="contact">
-                <h4>Contact Support</h4>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Email: info@changxing-motiontech.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Changxing MotionTech. All rights reserved.
-        </div>
-    </footer>
-
-</body>
-</html>
+        {% endfor %}
+    </div>
+</section>
