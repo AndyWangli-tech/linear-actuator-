@@ -1,39 +1,589 @@
 ---
 layout: default
 ---
-<header class="hero" style="padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;">
-    <div class="hero-content">
-        <h1 style="font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff, #9ca3af); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Next-Gen Precision Micro Motion</h1>
-        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2.5rem;">We manufacture premium micro linear actuators engineered for space-critical applications. Delivering robust force, high repeatability, and industrial grade reliability.</p>
-        <div class="hero-buttons">
-            <a href="#products" class="btn-primary" style="background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Explore Products</a>
-        </div>
-    </div>
-    <div class="hero-image">
-        <img src="SLA01-1.jpg" alt="Linear Actuator" style="max-width: 100%; height: auto;">
-    </div>
-</header>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Electric Linear Actuator & Heavy Duty Linear Actuator Manufacturer | 常兴运动科技 Changxing Motion Tech</title>
+    <meta name="description" content="Changxing Motion Tech is a premier manufacturer of high-quality electric linear actuators, heavy duty linear actuators, and mini linear actuators. Delivering robust thrust up to 45000N, IP66/IP68 waterproofing, and industrial-grade reliability for automation, medical, and solar tracking systems. 专业的电动直线执行器与重载直线推杆制造商。">
+    <meta name="keywords" content="electric linear actuator, heavy duty linear actuator, mini linear actuator, electric hydraulic linear actuator, 电动直线执行器, 重载直线推杆, 电动线性执行器, 重型线性执行器, 迷你线性执行器">
+    <meta name="author" content="Changxing Motion Tech">
+    <link rel="canonical" href="https://www.changxing-motiontech.com">
 
-<section class="products-section" id="products" style="background: var(--bg-secondary); padding: 5rem 2rem; border-top: 1px solid var(--border-color);">
-    <div style="text-align: center;">
-        <h2>Featured Actuators</h2>
-        <p style="color: var(--text-muted);">High performance solutions for automation, robotics, and medical fields.</p>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 3rem auto 0 auto;">
-        
-        {% for product in site.products %}
-        <div class="product-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-                <div class="card-media" style="text-align: center; background: rgba(0, 0, 0, 0.2); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                    <img src="{{ product.image }}" alt="{{ product.title }}" style="max-width: 100%; height: 180px; object-fit: contain;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        :root {
+            --color-bg-main: #0b0f19;
+            --color-bg-card: #111827;
+            --color-brand-blue: #00f2fe;
+            --color-brand-orange: #f97316;
+        }
+        body {
+            background-color: var(--color-bg-main);
+            color: #f3f4f6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .text-gradient-blue {
+            background: linear-gradient(135deg, #ffffff 30%, #9ca3af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.changxing-motiontech.com/#organization",
+          "name": "Changxing Motion Tech / 常兴运动科技",
+          "url": "https://www.changxing-motiontech.com",
+          "logo": "https://images.unsplash.com/photo-1617791160505-6f006e121980?auto=format&fit=crop&w=200&h=200&q=80",
+          "description": "Professional electric linear actuator and heavy duty linear actuator manufacturer."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.changxing-motiontech.com/#website",
+          "url": "https://www.changxing-motiontech.com",
+          "name": "Changxing Motion Tech",
+          "publisher": {
+            "@id": "https://www.changxing-motiontech.com/#organization"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Heavy Duty Industrial Electric Linear Actuator",
+          "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&h=400&q=80",
+          "description": "High thrust electric linear actuator engineered for industrial automation, supporting load capacity up to 45000N and IP67 protection.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Changxing Motion Tech"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "50",
+            "highPrice": "500",
+            "offerCount": "10"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#00f2fe] to-[#0070f3] rounded-lg flex items-center justify-center text-slate-900 font-bold text-xl shadow-[0_0_20px_rgba(0,242,254,0.3)]">
+                    C
                 </div>
-                <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff;">{{ product.title }}</h3>
-                <p class="card-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">{{ product.description }}</p>
+                <div class="flex flex-col">
+                    <span class="text-white font-black tracking-wider text-lg leading-none group-hover:text-[#00f2fe] transition-colors">CHANGXING</span>
+                    <span class="text-gray-400 text-xs font-semibold tracking-widest mt-0.5">MOTION TECH</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#products" class="text-gray-300 hover:text-[#00f2fe] transition-colors">Products</a>
+                <a href="#advantages" class="text-gray-300 hover:text-[#00f2fe] transition-colors">Advantages</a>
+                <a href="#tech-specs" class="text-gray-300 hover:text-[#00f2fe] transition-colors">Technical Highlights</a>
+                <a href="#applications" class="text-gray-300 hover:text-[#00f2fe] transition-colors">Applications</a>
+                <a href="#why-us" class="text-gray-300 hover:text-[#00f2fe] transition-colors">Why Choose Us</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex items-center space-x-1 text-xs text-gray-400 bg-gray-900 px-3 py-1.5 rounded-full border border-gray-800">
+                    <span class="text-[#00f2fe] font-semibold cursor-pointer">EN</span>
+                    <span class="text-gray-600">|</span>
+                    <span class="hover:text-white cursor-pointer transition-colors">ZH</span>
+                </div>
+                <a href="#contact" class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-5 py-2 rounded-md font-semibold text-sm hover:shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all duration-300">
+                    Get a Quote
+                </a>
             </div>
-            <a href="{{ product.url }}" class="card-btn" style="display: block; text-align: center; background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600;">View Full Specifications</a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
         </div>
-        {% endfor %}
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0b0f19] border-b border-gray-800 px-4 pt-2 pb-6 space-y-4">
+            <a href="#products" class="block text-gray-300 hover:text-[#00f2fe] py-2 border-b border-gray-900">Products</a>
+            <a href="#advantages" class="block text-gray-300 hover:text-[#00f2fe] py-2 border-b border-gray-900">Advantages</a>
+            <a href="#tech-specs" class="block text-gray-300 hover:text-[#00f2fe] py-2 border-b border-gray-900">Technical Highlights</a>
+            <a href="#applications" class="block text-gray-300 hover:text-[#00f2fe] py-2 border-b border-gray-900">Applications</a>
+            <a href="#why-us" class="block text-gray-300 hover:text-[#00f2fe] py-2 border-b border-gray-900">Why Choose Us</a>
+            <div class="pt-2 flex items-center justify-between">
+                <div class="text-xs text-gray-400">
+                    <span class="text-[#00f2fe] font-bold">EN</span> / <span class="hover:text-white">ZH</span>
+                </div>
+                <a href="#contact" class="bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white px-4 py-2 rounded font-semibold text-sm">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0b0f19] via-[#0f172a] to-[#0b0f19]">
+        <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00f2fe]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#f97316]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 bg-blue-950/60 border border-blue-800/60 px-3 py-1.5 rounded-full text-xs font-semibold text-[#00f2fe] tracking-wide">
+                    <span class="flex h-2 w-2 rounded-full bg-[#00f2fe] animate-pulse"></span>
+                    <span>Industrial-Grade Precision Motion Control</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-gradient-blue">
+                    Next-Gen Precision <br class="hidden sm:inline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2fe] to-[#0070f3]">Electric Linear Actuator</span> <br>
+                    & Heavy Duty Solutions
+                </h1>
+                <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Changxing Motion Tech (常兴运动科技) manufactures premium micro, macro, and <strong>heavy duty linear actuator</strong> lines. Engineered for harsh space-critical environments with ultimate power up to 45000N and smart control integration.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#products" class="w-full sm:w-auto bg-gradient-to-r from-[#00f2fe] to-[#0070f3] text-slate-900 font-bold px-8 py-3.5 rounded shadow-[0_4px_20px_rgba(0,242,254,0.3)] hover:transform hover:-translate-y-0.5 transition-all text-center">
+                        Explore Product Line <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto border border-gray-700 bg-gray-900/40 text-gray-300 font-semibold px-8 py-3.5 rounded hover:bg-gray-800 hover:text-white transition-all text-center">
+                        Request CAD Models
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto lg:mx-0 border-t border-gray-800/80">
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">45,000N</p>
+                        <p class="text-xs text-gray-500 font-medium uppercase tracking-wider mt-0.5">Max Thrust Force</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-extrabold text-[#f97316]">IP68</p>
+                        <p class="text-xs text-gray-500 font-medium uppercase tracking-wider mt-0.5">Max Waterproofing</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-extrabold text-white">100%</p>
+                        <p class="text-xs text-gray-500 font-medium uppercase tracking-wider mt-0.5">Industrial Grade</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative w-full max-w-md aspect-square bg-gradient-to-br from-gray-900 to-slate-900 border border-gray-800 p-8 rounded-2xl shadow-2xl flex items-center justify-center group">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#00f2fe]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                    <div class="absolute inset-4 border border-dashed border-gray-800 rounded-xl pointer-events-none"></div>
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&h=600&q=80" 
+                         alt="Changxing Industrial Premium Heavy Duty Linear Actuator Assembly" 
+                         class="object-contain w-5/6 h-5/6 rounded-lg filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.7)] transform group-hover:scale-105 transition-transform duration-500">
+                    <span class="absolute bottom-4 right-4 bg-gray-950/80 border border-gray-800 px-3 py-1 rounded text-[10px] tracking-widest text-gray-400 font-mono uppercase">Model: SLA-HD45K</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="py-24 bg-[#090d16] border-y border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#f97316] mb-2">Engineered Performance</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Why Engineers Specify Changxing Actuators
+                </p>
+                <p class="text-gray-400 mt-3 text-sm sm:text-base">
+                    Every electric linear actuator from our facility undergoes stringent quality controls to match heavy industrial demands.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#111827] border border-gray-800/60 p-6 rounded-xl hover:border-[#00f2fe]/40 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-950/50 rounded-lg flex items-center justify-center text-[#00f2fe] text-xl mb-5 group-hover:bg-[#00f2fe] group-hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">High Load Capacity</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Engineered to deliver high thrust capacity configuration reaching up to <strong>45000N</strong> dynamic force.</p>
+                </div>
+                <div class="bg-[#111827] border border-gray-800/60 p-6 rounded-xl hover:border-[#00f2fe]/40 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-blue-950/50 rounded-lg flex items-center justify-center text-[#00f2fe] text-xl mb-5 group-hover:bg-[#00f2fe] group-hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Extreme Protection</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Available with rugged **IP65, IP67, and IP68** ingress ratings suited for harsh outdoor environments.</p>
+                </div>
+                <div class="bg-[#111827] border border-gray-800/60 p-6 rounded-xl hover:border-[#00f2fe]/40 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-blue-950/50 rounded-lg flex items-center justify-center text-[#00f2fe] text-xl mb-5 group-hover:bg-[#00f2fe] group-hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Multi-Voltage Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Versatile power inputs supporting DC variants including **12V, 24V, 36V, and 48V** systems seamlessly.</p>
+                </div>
+                <div class="bg-[#111827] border border-gray-800/60 p-6 rounded-xl hover:border-[#00f2fe]/40 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-blue-950/50 rounded-lg flex items-center justify-center text-[#00f2fe] text-xl mb-5 group-hover:bg-[#00f2fe] group-hover:text-slate-900 transition-all">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Industrial ROI</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Combining global standard component parts to provide an unmatched cost-to-performance ratio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-[#0b0f19]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#00f2fe] mb-2">Product Portfolios</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Featured Actuator Product Series
+                </p>
+                <p class="text-gray-400 mt-3 text-sm sm:text-base">
+                    Discover specialized linear actuators meticulously structured to cover wide-ranging operational scales.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all group" data-aos="zoom-in" data-aos-delay="100">
+                    <div>
+                        <div class="bg-gray-950 p-6 flex items-center justify-center relative aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&w=500&h=300&q=80" 
+                                 alt="Heavy Duty Industrial Linear Actuator Series for high load machinery" 
+                                 class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-[#f97316] text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded tracking-wide uppercase">Top Dynamic Force</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-extrabold text-xl mb-2">Heavy Duty Linear Actuator Series</h3>
+                            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                Built explicitly for structural handling systems. Ideal for solar trackers, rugged farming machinery, and robust heavy industrial heavy machinery automation paths.
+                            </p>
+                            <table class="w-full text-xs text-gray-400">
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Thrust Capacity</td><td class="py-1.5 text-right text-white">Up to 45000N</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Voltage Input</td><td class="py-1.5 text-right text-white">24V / 48V DC</td></tr>
+                                <tr><td class="py-1.5 font-semibold text-gray-500">Ingress Rating</td><td class="py-1.5 text-right text-white">IP67 / IP68 Waterproof</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center bg-gray-800 text-gray-200 hover:bg-[#00f2fe] hover:text-slate-900 font-bold text-xs tracking-wider uppercase py-3 rounded transition-colors duration-300">
+                            Request Full Specifications
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all group" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <div class="bg-gray-950 p-6 flex items-center justify-center relative aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=500&h=300&q=80" 
+                                 alt="Precision Mini Linear Actuator for compact medical devices" 
+                                 class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-[#00f2fe] text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded tracking-wide uppercase">Space-Critical</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-extrabold text-xl mb-2">Mini Linear Actuator Series</h3>
+                            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                Compact, silent, ultra-slim designs engineered cleanly for medical equipment, intelligent home tech, surgical chairs, and miniature robotic arm integrations.
+                            </p>
+                            <table class="w-full text-xs text-gray-400">
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Thrust Capacity</td><td class="py-1.5 text-right text-white">Up to 2500N</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Voltage Input</td><td class="py-1.5 text-right text-white">12V / 24V DC</td></tr>
+                                <tr><td class="py-1.5 font-semibold text-gray-500">Profile Size</td><td class="py-1.5 text-right text-white">Ultra Compact Width</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center bg-gray-800 text-gray-200 hover:bg-[#00f2fe] hover:text-slate-900 font-bold text-xs tracking-wider uppercase py-3 rounded transition-colors duration-300">
+                            Request Full Specifications
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all group" data-aos="zoom-in" data-aos-delay="300">
+                    <div>
+                        <div class="bg-gray-950 p-6 flex items-center justify-center relative aspect-video overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&h=300&q=80" 
+                                 alt="Electric Hydraulic Linear Actuator combining electric power with hydraulic durability" 
+                                 class="object-cover w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 bg-purple-500 text-slate-950 font-bold text-[10px] px-2 py-0.5 rounded tracking-wide uppercase">Hybrid Tech</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-extrabold text-xl mb-2">Electric Hydraulic Actuators</h3>
+                            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                                Self-contained hybrid electro-hydraulic mechanisms configured beautifully to provide shock load absorption alongside heavy-duty operation reliability metrics.
+                            </p>
+                            <table class="w-full text-xs text-gray-400">
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Thrust Capacity</td><td class="py-1.5 text-right text-white">Up to 35000N</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-1.5 font-semibold text-gray-500">Shock Protection</td><td class="py-1.5 text-right text-white">Advanced Hydraulic Valve</td></tr>
+                                <tr><td class="py-1.5 font-semibold text-gray-500">Duty Cycle</td><td class="py-1.5 text-right text-white">Continuous Rated</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="block text-center bg-gray-800 text-gray-200 hover:bg-[#00f2fe] hover:text-slate-900 font-bold text-xs tracking-wider uppercase py-3 rounded transition-colors duration-300">
+                            Request Full Specifications
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-specs" class="py-24 bg-[#090d16] border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-[#f97316]">Technical Prowess</h2>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Parametric Versatility, Absolute Precision</h3>
+                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                        Changxing <strong>电动直线执行器</strong> engineering metrics provide system developers with flexible stroke lengths, smart hall sensor signal positioning, and absolute gear mesh longevity.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-square-check text-[#00f2fe] mt-1 text-sm"></i>
+                            <span class="text-gray-300 text-sm">Internal limit switches with automatic shut-off triggers.</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-square-check text-[#00f2fe] mt-1 text-sm"></i>
+                            <span class="text-gray-300 text-sm">High precision ball screw or self-locking acme lead screws.</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fa-solid fa-square-check text-[#00f2fe] mt-1 text-sm"></i>
+                            <span class="text-gray-300 text-sm">Customized stroke dimensions from 50mm up to 1500mm.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <div class="bg-[#111827] border border-gray-800 rounded-xl p-6 sm:p-8">
+                        <h4 class="text-white font-extrabold text-lg mb-6 flex items-center space-x-2">
+                            <i class="fa-solid fa-gears text-[#00f2fe]"></i>
+                            <span>Standard Selection Reference Parameters</span>
+                        </h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm text-gray-300">
+                                <thead>
+                                    <tr class="border-b border-gray-800 text-gray-500 font-mono text-xs uppercase tracking-wider">
+                                        <th class="pb-3 font-semibold">Specification Unit</th>
+                                        <th class="pb-3 font-semibold text-center">Micro Class</th>
+                                        <th class="pb-3 font-semibold text-right">Heavy Duty Industrial</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800/60 font-medium">
+                                    <tr>
+                                        <td class="py-3.5 text-gray-400 font-normal">Input Voltage Ranges</td>
+                                        <td class="py-3.5 text-center text-white">12V / 24V DC</td>
+                                        <td class="py-3.5 text-right text-white">24V / 36V / 48V DC</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3.5 text-gray-400 font-normal">Dynamic Thrust Force Max</td>
+                                        <td class="py-3.5 text-center text-white">1000N - 2500N</td>
+                                        <td class="py-3.5 text-right text-orange-400 font-bold">10000N - 45000N</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3.5 text-gray-400 font-normal">Stroke Extensions Range</td>
+                                        <td class="py-3.5 text-center text-white">50 - 600 mm</td>
+                                        <td class="py-3.5 text-right text-white">100 - 1500 mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3.5 text-gray-400 font-normal">Feedback Signaling</td>
+                                        <td class="py-3.5 text-center text-white">Potentiometer Optional</td>
+                                        <td class="py-3.5 text-right text-white">Dual Hall Effect / Encoder</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3.5 text-gray-400 font-normal">Operational Temperature</td>
+                                        <td class="py-3.5 text-center text-white">-20°C to +65°C</td>
+                                        <td class="py-3.5 text-right text-white">-40°C to +85°C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications" class="py-24 bg-[#0b0f19]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#00f2fe] mb-2">Omni-Industry Adaptability</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Powering Critical Motion Worldwide
+                </p>
+                <p class="text-gray-400 mt-3 text-sm sm:text-base">
+                    From extreme weather solar fields to precision medical cleanrooms, our engineering fits seamlessly.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden group hover:border-gray-700 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-40 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&h=300&q=80" alt="Linear Actuators utilized across industrial automation systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40"></div>
+                    </div>
+                    <div class="p-4"><h3 class="text-white font-bold text-sm tracking-wide">Industrial Automation</h3></div>
+                </div>
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden group hover:border-gray-700 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-40 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1622743941421-a430ddc11a6c?auto=format&fit=crop&w=400&h=300&q=80" alt="Heavy duty actuators driving solar tracking systems outdoor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40"></div>
+                    </div>
+                    <div class="p-4"><h3 class="text-white font-bold text-sm tracking-wide">Solar Tracking Systems</h3></div>
+                </div>
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden group hover:border-gray-700 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-40 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=400&h=300&q=80" alt="Precision mini linear actuators integrated within advanced medical beds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40"></div>
+                    </div>
+                    <div class="p-4"><h3 class="text-white font-bold text-sm tracking-wide">Medical & Healthcare</h3></div>
+                </div>
+                <div class="bg-[#111827] border border-gray-800 rounded-xl overflow-hidden group hover:border-gray-700 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-40 bg-gray-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&h=300&q=80" alt="Heavy duty actuators fitted onto rugged agricultural machinery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40"></div>
+                    </div>
+                    <div class="p-4"><h3 class="text-white font-bold text-sm tracking-wide">Agricultural Machinery</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-24 bg-[#090d16] border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative order-last lg:order-first" data-aos="fade-right">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-[#111827] p-6 border border-gray-800 rounded-xl text-center">
+                            <span class="text-3xl font-extrabold text-[#00f2fe]">100%</span>
+                            <p class="text-gray-400 text-xs mt-1 uppercase font-semibold">Full Inspection Tested</p>
+                        </div>
+                        <div class="bg-[#111827] p-6 border border-gray-800 rounded-xl text-center mt-6">
+                            <span class="text-3xl font-extrabold text-[#f97316]">50+</span>
+                            <p class="text-gray-400 text-xs mt-1 uppercase font-semibold">Export Countries</p>
+                        </div>
+                        <div class="bg-[#111827] p-6 border border-gray-800 rounded-xl text-center -mt-6">
+                            <span class="text-3xl font-extrabold text-white">CE / RoHS</span>
+                            <p class="text-gray-400 text-xs mt-1 uppercase font-semibold">Global Standards Certified</p>
+                        </div>
+                        <div class="bg-[#111827] p-6 border border-gray-800 rounded-xl text-center">
+                            <span class="text-3xl font-extrabold text-gray-400">24/7</span>
+                            <p class="text-gray-400 text-xs mt-1 uppercase font-semibold">Technical Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6" data-aos="fade-left">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-[#f97316]">Trust & Partnership</h2>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Your Trusted OEM / ODM Motion Partner</h3>
+                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                        At Changxing Motion Tech, we understand that structural downtime translates into immediate revenue loss. We specialize in producing replacement drops and unique customized configurations for complex mechanical linkages. 
+                    </p>
+                    <blockquote class="border-l-2 border-[#00f2fe] pl-4 text-xs sm:text-sm italic text-gray-400 font-mono">
+                        "Custom designs, comprehensive stress metrics checking, and dependable bulk delivery timelines set our linear actuator catalog apart."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gradient-to-b from-[#0b0f19] to-[#05070b] relative overflow-hidden">
+        <div class="absolute inset-0 bg-radial-gradient(from_center, #00f2fe/5, transparent) pointer-events-none"></div>
         
-    </div>
-</section>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8" data-aos="zoom-in">
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                Ready to Optimize Your <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2fe] to-[#f97316]">Motion Control Systems?</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+                Get in touch with our design engineers today. Request specialized CAD layouts, rapid dynamic thrust estimation charts, or wholesale quotations.
+            </p>
+
+            <div class="bg-[#111827] border border-gray-800 p-8 rounded-xl text-left shadow-2xl max-w-xl mx-auto">
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Our engineering specialist will reply within 2 hours.');">
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-gray-500 mb-1">Company Name</label>
+                        <input type="text" required class="w-full bg-gray-950 border border-gray-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#00f2fe]" placeholder="e.g. Automation Solutions Inc.">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-gray-500 mb-1">Business Email Address</label>
+                        <input type="email" required class="w-full bg-gray-950 border border-gray-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#00f2fe]" placeholder="engineer@yourfirm.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono uppercase tracking-wider text-gray-500 mb-1">Required Thrust Capacity / Application</label>
+                        <textarea rows="3" class="w-full bg-gray-950 border border-gray-800 rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#00f2fe]" placeholder="Describe your stroke requirements, thrust force target, or structural environment..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold py-3 rounded text-sm tracking-wide uppercase shadow-lg hover:shadow-orange-600/20 transition-all">
+                        Submit Technical RFQ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#05070b] border-t border-gray-900 py-12 text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-4 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-[#00f2fe] to-[#0070f3] rounded flex items-center justify-center text-slate-900 font-bold text-base">C</div>
+                    <span class="text-white font-black tracking-wider text-base">CHANGXING MOTION TECH</span>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    Professional **electric linear actuator** and **heavy duty linear actuator** manufacturer committed to premium quality systems, competitive pricing tiers, and global support metrics.
+                </p>
+            </div>
+
+            <div class="md:col-span-4 space-y-2">
+                <h4 class="text-white font-bold text-xs font-mono uppercase tracking-widest mb-3">Product Indexes</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <a href="#products" class="hover:text-white transition-colors">Mini Linear Actuator</a>
+                    <a href="#products" class="hover:text-white transition-colors">Heavy Duty Actuators</a>
+                    <a href="#products" class="hover:text-white transition-colors">Electro-Hydraulic Line</a>
+                    <a href="#tech-specs" class="hover:text-white transition-colors">12V / 24V / 48V Motors</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 space-y-2 text-xs">
+                <h4 class="text-white font-bold text-xs font-mono uppercase tracking-widest mb-3">Global Sales HQ</h4>
+                <p class="flex items-center space-x-2"><i class="fa-solid fa-globe text-gray-700"></i> <span class="text-gray-400">www.changxing-motiontech.com</span></p>
+                <p class="flex items-center space-x-2"><i class="fa-solid fa-envelope text-gray-700"></i> <span class="text-gray-400">sales@changxing-motiontech.com</span></p>
+                <p class="flex items-center space-x-2"><i class="fa-solid fa-location-dot text-gray-700"></i> <span class="text-gray-400">Changxing Industrial Motion Zone, Zhejiang, China</span></p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-900 text-center text-xs text-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© 2026 Changxing Motion Tech. All Rights Reserved. 常兴运动科技 版权所有</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-500">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-500">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+
+        // Toggle mobile drawer navigation logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Hide mobile menu on anchor click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
