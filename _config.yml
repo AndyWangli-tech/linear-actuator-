@@ -1,7 +1,7 @@
-title: Linear Actuator Product Center
-permalink: /:basename/
+title: "Linear Actuator Product Center"
 
+# 告诉 Jekyll 你的产品文件夹在哪里
 collections:
   products:
     output: true
-    permalink: /:collection/:basename/
+    permalink: /products/:name/
