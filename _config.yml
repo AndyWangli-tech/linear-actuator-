@@ -1,0 +1,7 @@
+title: Linear Actuator Product Center
+permalink: /:basename/
+
+collections:
+  products:
+    output: true
+    permalink: /:collection/:basename/
