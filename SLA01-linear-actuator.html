@@ -1,59 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLA01 Mini Linear Actuator | Changxing MotionTech</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
-        <div style="font-weight: bold; font-size: 1.2rem; color: var(--accent-teal);">Changxing Motion Tech</div>
-        <a href="index.html" style="color: var(--text-main); text-decoration: none; font-size: 0.9rem; hover: color: var(--accent-blue);">← Back to Home</a>
-    </nav>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Changxing<span>MotionTech</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="actuators.html">Products</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact Us</a>
+    </div>
+  </nav>
 
-    <section class="presentation-container" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        
-        <div class="product-gallery" style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; text-align: center;">
-                <img src="SLA01-1.jpg" alt="SLA01 Mini Linear Actuator Main View" style="max-width: 100%; height: auto; border-radius: 4px;">
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.5rem; text-align: center;">
-                    <img src="SLA01-3.png" alt="SLA01 Dimensions" style="max-width: 100%; height: auto;">
-                </div>
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.5rem; text-align: center;">
-                    <img src="SLA01-4S.png" alt="SLA01 Specifications" style="max-width: 100%; height: auto;">
-                </div>
-            </div>
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / <a href="actuators.html">Linear Actuators</a> / <span>SLA01 Mini Linear Actuator</span>
+  </div>
+
+  <!-- Product -->
+  <section class="product-layout">
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <div class="main-img">
+        <img id="mainImg" src="images/SLA01-1.jpg" alt="SLA01 Mini Linear Actuator">
+      </div>
+      <div class="thumbs">
+        <img src="images/SLA01-1.jpg" alt="Main view" onclick="document.getElementById('mainImg').src=this.src">
+        <img src="images/SLA01-3.png" alt="Dimensions" onclick="document.getElementById('mainImg').src=this.src">
+        <img src="images/SLA01-4S.png" alt="Specifications" onclick="document.getElementById('mainImg').src=this.src">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="product-info">
+      <span class="tag">Micro &amp; Powerful</span>
+      <h1>SLA01 Mini Linear Actuator</h1>
+      <p class="desc">
+        The SLA01 series features an ultra-compact design suitable for applications with
+        limited installation space. Engineered for precision, reliability and smooth motion
+        control in automation, robotics and medical equipment.
+      </p>
+
+      <table class="spec-table">
+        <tr><th>Stroke Length</th><td>10 – 100 mm</td></tr>
+        <tr><th>Max. Force</th><td>200 N</td></tr>
+        <tr><th>Speed</th><td>Up to 50 mm/s</td></tr>
+        <tr><th>Repeatability</th><td>± 0.02 mm</td></tr>
+        <tr><th>Voltage</th><td>DC 12 V / 24 V</td></tr>
+        <tr><th>Protection Rating</th><td>IP54</td></tr>
+        <tr><th>Operating Temp.</th><td>-10 °C ~ +60 °C</td></tr>
+      </table>
+
+      <a href="index.html#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="section bg-gray">
+    <div class="section-inner">
+      <h2 class="section-title">Key Features</h2>
+      <div class="features" style="margin-top:2.5rem;">
+        <div class="feature-item">
+          <div class="icon">↔</div>
+          <h4>Compact Footprint</h4>
+          <p>Fits into tight spaces without compromising performance.</p>
         </div>
-
-        <div class="product-info">
-            <span style="color: var(--accent-teal); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Micro & Powerful</span>
-            <h1 style="font-size: 2.5rem; margin: 0.5rem 0 1.5rem 0; background: linear-gradient(135deg, #fff, var(--text-muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SLA01 Mini Linear Actuator</h1>
-            <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">
-                The SLA01 series features an ultra-compact design suitable for applications with limited installation space. Engineered for precision, reliability, and smooth motion control in industrial automation, medical devices, and smart home systems.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
-                <div style="border-left: 3px solid var(--accent-teal); padding-left: 1rem;">
-                    <div style="font-size: 0.85rem; color: var(--text-muted);">Max Load</div>
-                    <div style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">Customizable</div>
-                </div>
-                <div style="border-left: 3px solid var(--accent-blue); padding-left: 1rem;">
-                    <div style="font-size: 0.85rem; color: var(--text-muted);">Compact Design</div>
-                    <div style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">SLA01 Mini Series</div>
-                </div>
-            </div>
-
-            <a href="Linear actuators.pdf" target="_blank" style="display: inline-block; background: linear-gradient(135deg, var(--accent-blue), #005bb5); color: white; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: opacity 0.2s;">
-                Download Datasheet (PDF)
-            </a>
+        <div class="feature-item">
+          <div class="icon">◎</div>
+          <h4>High Repeatability</h4>
+          <p>Consistent positioning of ± 0.02 mm.</p>
         </div>
-    </section>
-
-    <section style="background: var(--bg-secondary); padding: 4rem 2rem; border-top: 1px solid var(--border-color);">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="color: var(--text-main); margin-bottom: 2rem;">Technical Specifications</h2>
-            <div style="color: var(--text-muted);">
-                <p>Refer to the shared graphics and PDF documentation inside the repository for the exact stroke length, speed, and voltage configurations.</p>
-            </div>
+        <div class="feature-item">
+          <div class="icon">🔇</div>
+          <h4>Quiet Operation</h4>
+          <p>Low-noise motion for sensitive environments.</p>
         </div>
-    </section>
+        <div class="feature-item">
+          <div class="icon">🛡</div>
+          <h4>Durable Build</h4>
+          <p>IP54 rated for long-lasting reliability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Changxing<span>MotionTech</span></div>
+        <p style="font-size:0.9rem;">Precision motion solutions for global industry.</p>
+      </div>
+      <div><h4>Products</h4><ul>
+        <li><a href="actuators.html">Linear Actuators</a></li>
+        <li><a href="SLA01-linear-actuator.html">SLA01 Series</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="index.html#about">About Us</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><ul>
+        <li>info@changxing-motiontech.com</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 Changxing MotionTech. All rights reserved.</div>
+  </footer>
 
 </body>
 </html>
