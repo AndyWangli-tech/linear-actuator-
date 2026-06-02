@@ -21,6 +21,7 @@ layout: default
     </div>
 
     <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 3rem auto 0 auto;">
+        
         {% for product in site.products %}
         <div class="product-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -30,8 +31,9 @@ layout: default
                 <h3 class="card-title" style="font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff;">{{ product.title }}</h3>
                 <p class="card-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">{{ product.description }}</p>
             </div>
-            <a href="{{ product.url | relative_url }}" class="card-btn" style="display: block; text-align: center; background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600;">View Full Specifications</a>
+            <a href="{{ product.url }}" class="card-btn" style="display: block; text-align: center; background: linear-gradient(135deg, #00f2fe, #0070f3); color: #0b0f19; padding: 0.7rem; border-radius: 4px; text-decoration: none; font-weight: 600;">View Full Specifications</a>
         </div>
         {% endfor %}
+        
     </div>
 </section>
