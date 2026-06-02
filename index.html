@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,16 +93,18 @@
         </div>
 
         <div class="product-grid">
+            {% for product in site.products %}
             <div class="product-card">
                 <div>
                     <div class="card-media">
-                        <img src="SLA01-1.jpg" alt="SLA01 Mini Linear Actuator">
+                        <img src="{{ product.image }}" alt="{{ product.title }}">
                     </div>
-                    <h3 class="card-title">SLA01 Mini Linear Actuator</h3>
-                    <p class="card-desc">An ultra-compact design built for tight installation spaces. Features reliable thrust outputs up to 200N and multiple stroke options.</p>
+                    <h3 class="card-title">{{ product.title }}</h3>
+                    <p class="card-desc">{{ product.description }}</p>
                 </div>
-                <a href="SLA01-linear-actuator.html" class="card-btn">View Full Specifications</a>
+                <a href="{{ product.url | relative_url }}" class="card-btn">View Full Specifications</a>
             </div>
+            {% endfor %}
 
             <div class="product-card">
                 <div>
@@ -125,7 +130,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="actuators.html">Products</a></li>
-                    <li><a href="SLA01-linear-actuator.html">SLA01 Details</a></li>
                 </ul>
             </div>
             <div class="footer-links" id="contact">
