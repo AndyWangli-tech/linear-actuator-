@@ -1,264 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electric Linear Actuators - Technical Specifications | Changxing MotionTech</title>
-    <style>
-        :root {
-            --siemens-teal: #00ffcc;
-            --siemens-dark-teal: #009999;
-            --siemens-bg-dark: #1e262d;
-            --siemens-text-dark: #0f181f;
-            --siemens-gray-light: #f3f5f7;
-        }
-        body {
-            font-family: 'Siemens Sans', 'Segoe UI', Arial, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            color: var(--siemens-text-dark);
-        }
-        /* Navigation */
-        header {
-            background: #fff;
-            border-bottom: 2px solid var(--siemens-gray-light);
-            padding: 20px 0;
-        }
-        .container {
-            max-width: 1280px;
-            margin: auto;
-            padding: 0 24px;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: 900;
-            color: var(--siemens-text-dark);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .logo span { color: var(--siemens-dark-teal); }
-        header nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #4a5568;
-            font-weight: 600;
-            font-size: 15px;
-        }
-        header nav a:hover { color: var(--siemens-dark-teal); }
-        
-        /* Subpage Banner */
-        .page-title-section {
-            background: var(--siemens-bg-dark);
-            color: #fff;
-            padding: 60px 0;
-        }
-        .page-title-section h1 {
-            font-size: 38px;
-            margin: 0 0 10px 0;
-        }
-        .page-title-section p {
-            color: #cbd5e1;
-            margin: 0;
-            font-size: 16px;
-        }
-
-        /* Detailed Matrix Table */
-        section { padding: 60px 0; }
-        .section-headline {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-        .siemens-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 50px;
-        }
-        .siemens-table th {
-            background-color: var(--siemens-bg-dark);
-            color: #fff;
-            padding: 18px 20px;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            text-align: left;
-            border: 1px solid #2d3748;
-        }
-        .siemens-table td {
-            padding: 16px 20px;
-            border: 1px solid #e2e8f0;
-            font-size: 15px;
-        }
-        .siemens-table tr:nth-child(even) {
-            background-color: var(--siemens-gray-light);
-        }
-
-        /* Product Showcase Grid */
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .showcase-card {
-            border: 1px solid #e2e8f0;
-            background: #fff;
-        }
-        .showcase-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: contain;
-            background: var(--siemens-gray-light);
-            padding: 15px;
-            box-sizing: border-box;
-        }
-        .showcase-body { padding: 25px; }
-        .showcase-body h3 { margin: 0 0 10px 0; font-size: 20px; }
-        .showcase-body ul { padding-left: 20px; color: #4a5568; font-size: 14px; }
-        .showcase-body ul li { margin-bottom: 6px; }
-
-        .siemens-btn {
-            display: inline-block;
-            background: var(--siemens-dark-teal);
-            color: #fff;
-            padding: 12px 28px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            margin-top: 15px;
-        }
-
-        footer {
-            background: var(--siemens-text-dark);
-            color: #a0aec0;
-            padding: 40px 0;
-            font-size: 13px;
-            border-top: 4px solid var(--siemens-teal);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Actuators | Changxing MotionTech</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container nav-container">
-            <div class="logo">CHANGXING <span>MOTIONTECH</span></div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="actuators.html" style="color: var(--siemens-dark-teal)">Linear Actuators</a>
-                <a href="index.html#applications">Applications</a>
-                <a href="index.html#contact">Contact Support</a>
-            </nav>
-        </div>
-    </header>
 
-    <div class="page-title-section">
-        <div class="container">
-            <h1>Electric Linear Actuators</h1>
-            <p>High-performance engineering parameters for heavy industrial, solar tracking, and healthcare deployment.</p>
-        </div>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Changxing<span>MotionTech</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="actuators.html">Products</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact Us</a>
     </div>
+  </nav>
 
-    <section>
-        <div class="container">
-            <h2 class="section-headline">Technical Specification Matrix</h2>
-            <table class="siemens-table">
-                <thead>
-                    <tr>
-                        <th>Equipment Model</th>
-                        <th>Max Mechanical Thrust</th>
-                        <th>Velocity (No Load)</th>
-                        <th>Stroke Adaptation</th>
-                        <th>Industrial Standard</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>SLA01 / SLA011C</strong></td>
-                        <td>6000 N</td>
-                        <td>5 - 45 mm/s</td>
-                        <td>50mm - 1000mm</td>
-                        <td>IP66 Harsh Environment Duty</td>
-                    </tr>
-                    <tr>
-                        <td><strong>SLA02 Feedback Opt.</strong></td>
-                        <td>1500 N</td>
-                        <td>20 mm/s</td>
-                        <td>20mm - 800mm</td>
-                        <td>Integrated Potentiometer Position Control</td>
-                    </tr>
-                    <tr>
-                        <td><strong>SLA03 Heavy Dynamic</strong></td>
-                        <td>6000 N</td>
-                        <td>29 mm/s</td>
-                        <td>20mm - 800mm</td>
-                        <td>High-Frequency Automated Operation</td>
-                    </tr>
-                    <tr>
-                        <td><strong>SLA04 High Velocity</strong></td>
-                        <td>200 N</td>
-                        <td>230 mm/s</td>
-                        <td>20mm - 800mm</td>
-                        <td>Synchronized Ventilation / Window Automation</td>
-                    </tr>
-                </tbody>
-            </table>
+  <!-- Page header -->
+  <header class="hero" style="padding:4rem 2rem;">
+    <div class="hero-inner">
+      <h1 style="font-size:2.4rem;">Linear Actuators</h1>
+      <p>Browse our complete range of precision linear motion products.</p>
+    </div>
+  </header>
 
-            <h2 class="section-headline" style="margin-top: 60px;">Series Configurations</h2>
-            <div class="showcase-grid">
-                <div class="showcase-card">
-                    <img src="SLA01-1.jpg" alt="SLA01 Series">
-                    <div class="showcase-body">
-                        <h3>SLA01 Robust Series</h3>
-                        <ul>
-                            <li>Input Voltage: 12V / 24V / 36V / 48V DC</li>
-                            <li>Max Lift/Thrust Capability: 6000N</li>
-                            <li>Built-in factory preset limit switches</li>
-                            <li>Aluminum alloy structural frame</li>
-                        </ul>
-                        <a href="index.html#contact" class="siemens-btn">Get Quote</a>
-                    </div>
-                </div>
+  <section class="section">
+    <div class="section-inner">
+      <div class="card-grid">
 
-                <div class="showcase-card">
-                    <img src="SLA01-3.png" alt="SLA03 Series">
-                    <div class="showcase-body">
-                        <h3>SLA03 Automation Series</h3>
-                        <ul>
-                            <li>Optimized for High Duty Cycle</li>
-                            <li>Enhanced dynamic heat dissipation</li>
-                            <li>Optional Hall effect sensor feedback</li>
-                            <li>Ideal for precise synchronized tracking</li>
-                        </ul>
-                        <a href="index.html#contact" class="siemens-btn">Get Quote</a>
-                    </div>
-                </div>
-
-                <div class="showcase-card">
-                    <img src="SLA01-4S.png" alt="SLA04 Series">
-                    <div class="showcase-body">
-                        <h3>SLA04 High-Speed Series</h3>
-                        <ul>
-                            <li>Speed options scaling up to 230 mm/s</li>
-                            <li>Compact cylindrical footprint</li>
-                            <li>Perfect for window opening systems</li>
-                            <li>Quiet and steady transmission architecture</li>
-                        </ul>
-                        <a href="index.html#contact" class="siemens-btn">Get Quote</a>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+          <div class="card-img"><img src="images/SLA01-1.jpg" alt="SLA01 Mini Linear Actuator"></div>
+          <div class="card-body">
+            <span class="card-tag">Micro & Powerful</span>
+            <h3>SLA01 Mini Linear Actuator</h3>
+            <p>Ultra-compact design for precise motion in limited spaces.</p>
+            <a href="SLA01-linear-actuator.html" class="card-link">View details →</a>
+          </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Changzhou Changxing Motion Tech Co., Ltd. Global Motion Systems. All Rights Reserved.</p>
+        <div class="card">
+          <div class="card-img"><img src="images/SLA01-3.png" alt="SLA02 Industrial Actuator"></div>
+          <div class="card-body">
+            <span class="card-tag">High Load</span>
+            <h3>SLA02 Industrial Series</h3>
+            <p>Heavy-duty actuators for continuous high-force operation.</p>
+            <a href="#" class="card-link">Coming soon →</a>
+          </div>
         </div>
-    </footer>
+
+        <div class="card">
+          <div class="card-img"><img src="images/SLA01-4S.png" alt="SLA03 Precision Actuator"></div>
+          <div class="card-body">
+            <span class="card-tag">High Precision</span>
+            <h3>SLA03 Precision Series</h3>
+            <p>Sub-micron repeatability for medical and semiconductor use.</p>
+            <a href="#" class="card-link">Coming soon →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Changxing<span>MotionTech</span></div>
+        <p style="font-size:0.9rem;">Precision motion solutions for global industry.</p>
+      </div>
+      <div><h4>Products</h4><ul>
+        <li><a href="actuators.html">Linear Actuators</a></li>
+        <li><a href="SLA01-linear-actuator.html">SLA01 Series</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="#">News</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><ul>
+        <li>info@changxing-motiontech.com</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 Changxing MotionTech. All rights reserved.</div>
+  </footer>
+
 </body>
 </html>
